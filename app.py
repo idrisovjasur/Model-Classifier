@@ -1,17 +1,18 @@
 import streamlit as st
 
 import pathlib
-
+import platform
 from fastai.vision.core import PILImage
 
-temp = pathlib.PosixPath
-pathlib.PosixPath = pathlib.WindowsPath
-
+# temp = pathlib.PosixPath
+# pathlib.PosixPath = pathlib.WindowsPath
+plt = platform.system()
+if plt == 'Linux':pathlib.WindowsPath = pathlib.PosixPath
 
 ####streamlit
 from fastai.learner import load_learner
 
-st.title('Transport klassifkatsiya qiluvchi model_AI')
+st.title('Transport klassifkatsiya qiluvchi model_AI by I.Jasur')
 file = st.file_uploader('Rasim yuklash' , type = ['png','jpeg','jpg','gif','svg'])
 
 if file:
