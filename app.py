@@ -23,4 +23,3 @@ if file:
     st.success(f"Bashorat:{pred}")
     st.info(f'Ehtimolligi:{probs[pred_id]}')
 
-    
