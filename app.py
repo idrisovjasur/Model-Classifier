@@ -12,7 +12,7 @@ if plt == 'Linux':pathlib.WindowsPath = pathlib.PosixPath
 ####streamlit
 from fastai.learner import load_learner
 
-st.title('Transport klassifkatsiya qiluvchi model_AI by I.Jasur')
+st.title('Transport klassifkatsiya qiluvchi model_AI by I.Jasur (Car, Airplane, Boat )')
 file = st.file_uploader('Rasim yuklash' , type = ['png','jpeg','jpg','gif','svg'])
 
 if file:
